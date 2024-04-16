@@ -14,10 +14,15 @@ function direction(){
         } 
     }
 if (direcOfCount == down) {
-        let startNum = readline.question("Enter a number between 20 and 1 to start the countdown to 1 from: ")
-                for(let i = startNum; i>= 1; i--){
+
+        let startNum = 0;
+        do {
+        startNum = readline.question("Enter a number between 20 and 1 to start the countdown to 1 from: ")
+        } while (startNum >= 20)
+    
+        for(let i = startNum; i>= 1; i--){
                     console.log(i)
-            }; // need to add in a catch so startNum can't go above 20
+            }; 
         }
 }
     direction()
